@@ -1,7 +1,6 @@
-# Restore the Vue component
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted, nextTick } from "vue";
-import tackpad from 'tackpad-widget-ts-sdk'
+import tacklet from 'tacklet'
 import { fabric } from "fabric";
 import {
   Pencil,
@@ -54,16 +53,14 @@ const colors = ref([
 const toolsVisibility = ref(true);
 
 onMounted(async () => {
-
-  window.tackpad = tackpad;
   nextTick(async () => {
-  tackpad.on('selected', () => {
+  tacklet.on('selected', () => {
     toolsVisibility.value = true;
   });
-  tackpad.on('deselected', () => {
+  tacklet.on('deselected', () => {
     toolsVisibility.value = false;
   });
-  await tackpad.connect()
+  await tacklet.connect()
   console.log("Initializing canvas")
   initCanvas();
   window.addEventListener("resize", resizeCanvas);
@@ -100,7 +97,7 @@ async function initCanvas() {
   canvas.value.freeDrawingBrush.color = activeColor.value;
   canvas.value.freeDrawingBrush.width = brushSize.value;
 
-  const initalState =await tackpad.getData()
+  const initalState =await tacklet.getData()
   console.log({initalState})
   if(Object.keys(initalState).length > 0) {
     try {canvas.value.loadFromJSON(
@@ -219,7 +216,7 @@ function saveState() {
 
   redoStack.value = [];
   undoStack.value.push(state);
-  tackpad.setData(data);
+  tacklet.setData(data);
   updateUndoRedoButtons();
 }
 
