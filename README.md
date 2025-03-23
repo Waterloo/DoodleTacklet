@@ -1,5 +1,37 @@
-# Vue 3 + TypeScript + Vite
+# DoodleTack - Tackpad Tacklet
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+DoodleTack is a lightweight and intuitive drawing widget for Tackpad, designed for quick sketches, annotations, and visual brainstorming. Whether you're jotting down ideas or making simple diagrams, DoodleTack offers a seamless drawing experience inside Tackpad's freeform canvas.
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+## Features
+
+- **Freehand Drawing** – Smooth and responsive sketching with a natural feel.
+- **Color Palette** – Choose from a variety of colors to enhance your creativity.
+- **Eraser Tool** – Easily remove strokes and refine your drawings.
+- **Undo & Redo** – Effortlessly correct mistakes and iterate on your sketches.
+- **Resizable Canvas** – Adjust the drawing area to fit your needs.
+
+## Installation
+
+DoodleTack is built into Tackpad, so there’s no separate installation required. Just add the widget inside Tackpad and start drawing instantly.
+
+## Usage
+
+1. Open Tackpad and navigate to the widget selection menu.
+2. Add **DoodleTack** to your canvas.
+3. Start drawing with your mouse, stylus, or touchscreen.
+4. Use the toolbar to change colors, erase, and undo/redo your work.
+
+## Roadmap
+
+- **Brush Customization** – Vary stroke thickness and opacity.
+- **Layer Support** – Organize sketches on multiple layers.
+- **Collaboration Mode** – Real-time sketching with others.
+
+## Contributing
+
+Want to improve DoodleTack? Feel free to contribute by submitting issues, feature requests, or pull requests.
+
+## License
+
+MIT License. See `LICENSE` for details.
+
